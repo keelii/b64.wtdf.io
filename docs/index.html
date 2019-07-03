@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base64 Converter</title>
+    <link rel="stylesheet" href="//code.bdstatic.com/npm/@wtdf/joshua@0.0.12/dist/joshua.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <style>
+    .btn, .select, .input { margin-bottom: 0; vertical-align: middle; }
+
+    .container, html, body { height: 100%; }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #topbar {
+        padding: 30px 0;
+    }
+    #regexp span { color: #ccc; }
+    #editor table {
+        margin-bottom: 0
+    }
+    #editor {
+        flex-grow: 1;
+        padding-bottom: 2em;
+    }
+    .content {
+        border: 1px solid #a4a4a4;
+        min-height: 500px;
+        width: 100%;
+        padding: 1em;
+        font-family: var(--font-mono), monospace;
+        white-space: pre-wrap;
+        -webkit-user-modify: read-write-plaintext-only;
+        user-modify: read-write-plaintext-only;
+        outline: none;
+    }
+    #content mark {
+        background: #1696d2;
+        outline: 1px solid #fff;
+    }
+    .tac .btn {
+        margin-bottom: 10px;
+    }
+    </style>
+
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+        // if ('serviceWorker' in navigator) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('/sw.js')
+        //             .then((reg) => {
+        //                 console.log('Service worker registered.')
+        //             })
+        //     })
+        // }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <br>
+        <div id="editor">
+            <div class="row" data-type="base64">
+                <h3 class="col-1">Base64</h3>
+                <div class="col-5-12">
+                    <pre class="content content-left" contenteditable spellcheck="false"></pre>
+                </div>
+                <div class="col-2-12 tac">
+                    <p><button class="btn full-width outline">Encode</button></p>
+                    <p><button class="btn full-width outline">Decode</button></p>
+                </div>
+                <div class="col-5-12">
+                    <pre class="content content-right" contenteditable spellcheck="false"></pre>
+                </div>
+            </div>
+            <div class="row" data-type="hex" style="display: none;">
+                <h3 class="col-1">Hex</h3>
+                <div class="col-5-12">
+                    <pre class="content content-left" contenteditable spellcheck="false"></pre>
+                </div>
+                <div class="col-2-12 tac">
+                    <p><button class="btn full-width outline">Encode</button></p>
+                    <p><button class="btn full-width outline">Decode</button></p>
+                </div>
+                <div class="col-5-12">
+                    <pre class="content content-right" contenteditable spellcheck="false"></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+
+</body>
+</html>

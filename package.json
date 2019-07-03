@@ -1,0 +1,17 @@
+{
+  "name": "@wtdf/base64",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/parcel watch --out-dir docs src/index.js",
+    "build:js": "./node_modules/.bin/parcel build --no-source-maps --out-dir docs src/index.js",
+    "clear": "rm docs/*.map",
+    "build": "yarn clear && yarn build:js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
