@@ -2,6 +2,10 @@ import Utf8 from 'crypto-js/enc-utf8'
 import Base64 from 'crypto-js/enc-base64'
 import Hex from 'crypto-js/enc-hex'
 import sha256 from 'crypto-js/sha256';
+import md5 from 'crypto-js/md5';
+
+window.sha256 = sha256
+window.md5 = md5
 
 window.getType = () => {
     var match = location.href.match(/type=\w+/)
