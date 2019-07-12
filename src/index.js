@@ -58,6 +58,7 @@ function init(el, type) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.content-left').focus()
     document.querySelectorAll('#editor [data-type]')
         .forEach(el => init(el, el.getAttribute('data-type')))
 })
