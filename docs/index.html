@@ -42,18 +42,19 @@
     .tac .btn {
         margin-bottom: 10px;
     }
+    .sub-link { color: #1696d2; font-weight: normal; font-size: 12px; }
     </style>
 
     <link rel="manifest" href="/manifest.json" />
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then((reg) => {
-                        console.log('Service worker registered.')
-                    })
-            })
-        }
+        // if ('serviceWorker' in navigator) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('/sw.js')
+        //             .then((reg) => {
+        //                 console.log('Service worker registered.')
+        //             })
+        //     })
+        // }
     </script>
 </head>
 <body>
@@ -62,7 +63,7 @@
         <br>
         <div id="editor">
             <div class="row" data-type="base64">
-                <h3 class="col-1">Base64</h3>
+                <h3 class="col-1">Base64 Converter　<a class="sub-link" href="//hash.wtdf.io">hash</a> </h3>
                 <div class="col-5-12">
                     <pre class="content content-left" contenteditable spellcheck="false"></pre>
                 </div>
@@ -87,7 +88,6 @@
                     <pre class="content content-right" contenteditable spellcheck="false"></pre>
                 </div>
             </div>
-            
         </div>
     </div>
 
