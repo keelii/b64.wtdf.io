@@ -1,4 +1,4 @@
-__CACHE_VER__ = "base64.wtdf.io_v1.0.1"
+__CACHE_VER__ = "b64.wtdf.io_v1.0.1"
 __CACHE_URLS__ = [
     "/",
     "/index.css",
@@ -33,7 +33,6 @@ self.addEventListener('activate', function(evt) {
 })
 
 self.addEventListener('fetch', function (event) {
-    console.log('[Fetch]', event.request.url)
     event.respondWith(
         caches.match(event.request).then(res => {
             return res ||
